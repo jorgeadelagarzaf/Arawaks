@@ -1,10 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 import { Box, HStack, Image } from '@chakra-ui/react';
 import { ColorModeButton, useColorMode } from '../../components/ui/color-mode';
 import LogoBlanco from '../../assets/LogoTextoBlanco.png';
 import LogoNegro from '../../assets/LogoTextoNegro.png';
-import { Outlet } from 'react-router-dom';
 
 const MainLayout = () => {
   const { colorMode } = useColorMode(); // Access current color mode

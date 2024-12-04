@@ -1,8 +1,8 @@
 import React from 'react';
+import { Outlet } from 'react-router-dom';
 import { Box, Flex } from '@chakra-ui/react';
 import Topbar from './Topbar';
 import Sidebar from './Sidebar';
-import { Outlet } from 'react-router-dom';
 
 const DashboardLayout = () => {
 

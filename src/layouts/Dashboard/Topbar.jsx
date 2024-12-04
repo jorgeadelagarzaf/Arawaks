@@ -1,8 +1,9 @@
+import { Box, Flex, Input, Icon } from '@chakra-ui/react';
 import { InputGroup } from '../../components/ui/input-group';
-import { Box, Flex, IconButton, Input, Icon } from '@chakra-ui/react';
-import { FiSearch } from 'react-icons/fi'; // Import icons
-import { MdOutlineSettings, MdPersonOutline, MdOutlineNotifications } from 'react-icons/md';
-import { ColorModeButton } from '../../components/ui/color-mode';
+import { MdOutlineSearch  } from 'react-icons/md';
+import ProfileMeu from './ProfileMenu';
+import SettingsMenu from './SettingsMenu';
+import NotificationMenu from './NotificationMenu';
 
 const Topbar = () => {
     return (
@@ -17,22 +18,15 @@ const Topbar = () => {
           top="0"
         >
           <Box display="flex" bg="bg.muted" borderRadius="3px">
-            <InputGroup flex="1" endElement={<Icon color="fg.muted"><FiSearch /></Icon>}>
+            <InputGroup flex="1" endElement={<Icon color="fg.muted" size="md"><MdOutlineSearch /></Icon>}>
               <Input sx={{ml:2, flex: 1}} placeholder="Buscar..." />
             </InputGroup>
           </Box>
 
           <Flex justify="space-between" align="center">
-            <ColorModeButton color="fg.muted" rounded="full"/>
-            <IconButton type="button" variant="ghost" color="fg.muted" rounded="full">
-                <MdOutlineNotifications  />
-            </IconButton>
-            <IconButton type="button" variant="ghost" color="fg.muted" rounded="full">
-                <MdOutlineSettings />
-            </IconButton>
-            <IconButton type="button" variant="ghost" color="fg.muted" rounded="full">
-                <MdPersonOutline />
-            </IconButton>
+            <NotificationMenu />
+            <SettingsMenu />
+            <ProfileMeu />
         </Flex>
         </Box>
     );
