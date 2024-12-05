@@ -11,7 +11,7 @@ const DashboardLayout = () => {
       <Sidebar/>
       <Flex direction="column" flex="1">
         <Topbar />
-        <Box as="main" p="1rem" bg="bg.muted" h="100vh">
+        <Box as="main" p="1rem" bg="bg.muted" h="100vh" overflow="auto">
           <Outlet />
         </Box>
       </Flex>

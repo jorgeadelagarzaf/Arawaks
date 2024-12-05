@@ -7,9 +7,10 @@ import Nosotros from './pages/main/Nosotros/Nosotros';
 import Contacto from './pages/main/Contacto/Contacto';
 
 import DashboardLayout from './layouts/Dashboard/DashboardLayout';
-import Panel from './pages/dashboard/Panel/Panel';
+import Dashboard from './pages/dashboard/Dashboard/Dashboard';
 import Actividades from './pages/dashboard/Actividades/Actividades';
 import Socios from './pages/dashboard/Socios/Socios';
+import SocioDetail from './pages/dashboard/Socios/Details/SocioDetail';
 import Instructores from './pages/dashboard/Instructores/Instructores';
 import Fotos from './pages/dashboard/Fotos/Fotos';
 import Calendario from './pages/dashboard/Calendario/Calendario';
@@ -33,9 +34,10 @@ function App() {
 
         {/* Routes with DashboardLayout */}
         <Route element={<DashboardLayout />}>
-          <Route path="/dashboard" element={<Panel />} />
+          <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/dashboard/actividades" element={<Actividades />} />
           <Route path="/dashboard/socios" element={<Socios />} />
+          <Route path="/dashboard/socios/:id" element={<SocioDetail />} />
           <Route path="/dashboard/instructores" element={<Instructores />} />
           <Route path="/dashboard/fotos" element={<Fotos />} />
           <Route path="/dashboard/calendario" element={<Calendario />} />

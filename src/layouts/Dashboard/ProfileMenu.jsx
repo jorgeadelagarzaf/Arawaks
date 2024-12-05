@@ -1,4 +1,4 @@
-import { Box, HStack, Stack, Text } from '@chakra-ui/react';
+import { Box, HStack, Stack, Text, Separator } from '@chakra-ui/react';
 import { MenuContent, MenuItem, MenuRoot, MenuTrigger, MenuTriggerItem } from "../../components/ui/menu"
 import { Avatar } from '../../components/ui/avatar';
 import { useColorMode } from '../../components/ui/color-mode';
@@ -47,6 +47,7 @@ const ProfileMenu = () => {
           {colorMode === "light" ? <MdOutlineLightMode /> : <MdOutlineDarkMode />}
           <Box flex="1">Modo {colorMode === "light" ? "Claro" : "Oscuro"}</Box>
         </MenuItem>
+        <Separator />
         <MenuItem value="cerrar" valueText="cerrar">
           <MdOutlineExitToApp />
           <Box flex="1">Cerrar Sesión</Box>

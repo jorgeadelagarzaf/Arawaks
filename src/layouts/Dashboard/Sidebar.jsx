@@ -26,10 +26,10 @@ const Sidebar = () => {
     const { colorMode } = useColorMode();
     const [collapsed, setCollapsed] = useState(false);
     const toggleSidebar = () => setCollapsed(!collapsed);
-    const [selected, setSelected] = useState('Panel');
+    const [selected, setSelected] = useState('Dashboard');
 
     return (
-        <Box as="aside" w={collapsed ? '115px' : '270px'} h="100vh" bg="bg.panel" _dark={{ bg: "gray.800" }} transition="width 0.3s ease" position="sticky" top="0" overflowY="visible">
+        <Box as="aside" w={collapsed ? '115px' : '270px'} h="100vh" bg="bg.panel" _dark={{ bg: "gray.800" }} transition="width 0.3s ease" position="sticky" top="0" overflowY="visible" zIndex="10">
           <Box h="100vh" overflowY="auto" p="1rem">
             <VStack align={collapsed ? 'center' : 'start'} spacing="1.5rem">
               <HStack px="2">
@@ -44,7 +44,7 @@ const Sidebar = () => {
               {/* Navigation Links */}
               <VStack align={collapsed ? 'center' : 'start'} spacing="1rem" color="fg.muted" p="5" w="100%">
                 {!collapsed && <Text variant="h6" pt="2">General</Text>}
-                <Item title="Panel" to="/dashboard" icon={MdOutlineHome} collapsed={collapsed} selected={selected} setSelected={setSelected}/>
+                <Item title="Dashboard" to="/dashboard" icon={MdOutlineHome} collapsed={collapsed} selected={selected} setSelected={setSelected}/>
                 {!collapsed && <Text variant="h6" pt="2">Datos</Text>}
                 <Item title="Actividades" to="/dashboard/actividades" icon={MdOutlineRocketLaunch} collapsed={collapsed} selected={selected} setSelected={setSelected}/>
                 <Item title="Socios" to="/dashboard/socios" icon={MdOutlinePeople} collapsed={collapsed} selected={selected} setSelected={setSelected}/>

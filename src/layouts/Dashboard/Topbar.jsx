@@ -16,6 +16,7 @@ const Topbar = () => {
           _dark={{ bg: "gray.800" }}
           position="sticky"
           top="0"
+          zIndex="10"
         >
           <Box display="flex" bg="bg.muted" borderRadius="3px">
             <InputGroup flex="1" endElement={<Icon color="fg.muted" size="md"><MdOutlineSearch /></Icon>}>
