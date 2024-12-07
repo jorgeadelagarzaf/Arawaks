@@ -9,6 +9,7 @@ import Contacto from './pages/main/Contacto/Contacto';
 import DashboardLayout from './layouts/Dashboard/DashboardLayout';
 import Dashboard from './pages/dashboard/Dashboard/Dashboard';
 import Actividades from './pages/dashboard/Actividades/Actividades';
+import ActividadesDetails from './pages/dashboard/Actividades/Details/ActividadesDetails';
 import Socios from './pages/dashboard/Socios/Socios';
 import SocioDetail from './pages/dashboard/Socios/Details/SocioDetail';
 import Instructores from './pages/dashboard/Instructores/Instructores';
@@ -36,6 +37,7 @@ function App() {
         <Route element={<DashboardLayout />}>
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/dashboard/actividades" element={<Actividades />} />
+          <Route path="/dashboard/actividades/:id" element={<ActividadesDetails />} />
           <Route path="/dashboard/socios" element={<Socios />} />
           <Route path="/dashboard/socios/:id" element={<SocioDetail />} />
           <Route path="/dashboard/instructores" element={<Instructores />} />

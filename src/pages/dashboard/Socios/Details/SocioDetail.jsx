@@ -8,7 +8,8 @@ import {
   BreadcrumbLink,
   BreadcrumbRoot,
 } from "../../../../components/ui/breadcrumb"
-import { MdOutlinePeople, MdOutlineCheckCircle, MdGroupAdd, MdOutlineAccountCircle, MdOutlineStorage  } from "react-icons/md";
+import { MdOutlinePeople, MdMailOutline, MdOutlineAccountCircle, MdOutlineStorage, MdOutlineSportsEsports, MdOutlinePayments } from "react-icons/md";
+import InformacionMenu from "./InformacionMenu";
 
 const SocioDetail = () => {
   const { id } = useParams();
@@ -34,10 +35,10 @@ const SocioDetail = () => {
           <Box w="full" display="flex" justifyContent="space-between">
             <Box>
               <Text fontWeight="bold" textStyle="xl">Jorge de la Garza</Text>
-              <Text pb="5">Socio de 8° Grado</Text>
+              <Text>Socio de 8° Grado {id}</Text>
             </Box>
             <Box>
-              <Button colorPalette="white" variant="surface"><MdGroupAdd /><Text>Editar Socio</Text></Button>
+              <Button colorPalette="white" variant="surface"><MdMailOutline /><Text>Enviar Correo</Text></Button>
             </Box>
           </Box>
         </HStack>
@@ -49,23 +50,23 @@ const SocioDetail = () => {
               Perfil
             </Tabs.Trigger>
             <Tabs.Trigger value="actividades">
-              <MdOutlineCheckCircle />
+              <MdOutlineSportsEsports />
               Actividades
             </Tabs.Trigger>
             <Tabs.Trigger value="pagos">
-              <MdOutlineCheckCircle />
+              <MdOutlinePayments />
               Pagos
             </Tabs.Trigger>
             <Tabs.Trigger value="datos">
               <MdOutlineStorage />
-              Datos
+              Información
             </Tabs.Trigger>
             <Tabs.Indicator rounded="l2" />
           </Tabs.List>
           <Tabs.Content value="perfil">Manage your perfil</Tabs.Content>
           <Tabs.Content value="actividades">Manage your actividades</Tabs.Content>
           <Tabs.Content value="pagos">Manage your pagos</Tabs.Content>
-          <Tabs.Content value="datos">Manage your datos</Tabs.Content>
+          <Tabs.Content value="datos"><InformacionMenu/></Tabs.Content>
         </Tabs.Root>
     </Box>
   );
